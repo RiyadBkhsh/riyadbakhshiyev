@@ -4,11 +4,11 @@
 	<meta charset="utf-8" />
 	<title>Riyad Bakhshiyev — Senior Data Engineer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="Senior Data Engineer specializing in Azure, Microsoft Fabric, SQL and Python. I design and build cloud data platforms, ETL/ELT pipelines and analytics solutions." />
+	<meta name="description" content="Senior Data Engineer & BI Developer in Kraków with 8+ years building cloud-native data platforms on Azure, Databricks and Microsoft Fabric — ETL/ELT pipelines, streaming integration and Power BI analytics." />
 	<meta property="og:title" content="Riyad Bakhshiyev — Senior Data Engineer" />
 	<meta property="og:url" content="https://riyadbkhsh.github.io/riyadbakhshiyev/" />
 	<meta property="og:image" content="images/briyad.jpg" />
-	<meta property="og:description" content="Senior Data Engineer specializing in Azure, Microsoft Fabric, SQL and Python. I design and build cloud data platforms, ETL/ELT pipelines and analytics solutions." />
+	<meta property="og:description" content="Senior Data Engineer & BI Developer in Kraków with 8+ years building cloud-native data platforms on Azure, Databricks and Microsoft Fabric — ETL/ELT pipelines, streaming integration and Power BI analytics." />
 	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -384,8 +384,74 @@
 			color: var(--accent-2);
 		}
 
+		/* ---------- Experience timeline ---------- */
+		.timeline { position: relative; margin-left: 8px; max-width: 860px; }
+		.timeline::before {
+			content: "";
+			position: absolute;
+			left: 0; top: 6px; bottom: 6px;
+			width: 2px;
+			background: linear-gradient(180deg, var(--accent), var(--accent-2), transparent);
+			opacity: 0.35;
+		}
+		.job { position: relative; padding: 0 0 48px 38px; }
+		.job:last-child { padding-bottom: 0; }
+		.job::before {
+			content: "";
+			position: absolute;
+			left: -5px; top: 6px;
+			width: 12px; height: 12px;
+			border-radius: 50%;
+			background: var(--bg);
+			border: 2px solid var(--accent);
+		}
+		.job .period {
+			font-family: var(--mono);
+			font-size: 0.78rem;
+			color: var(--accent-2);
+			margin-bottom: 6px;
+		}
+		.job h3 { font-size: 1.12rem; font-weight: 700; }
+		.job .company { color: var(--text-dim); font-size: 0.92rem; font-weight: 500; margin-bottom: 14px; }
+		.job .company span { color: var(--text-faint); }
+		.job ul { list-style: none; margin-bottom: 16px; }
+		.job ul li {
+			color: var(--text-dim);
+			font-size: 0.92rem;
+			padding-left: 20px;
+			position: relative;
+			margin-bottom: 7px;
+		}
+		.job ul li::before { content: "▸"; position: absolute; left: 0; color: var(--accent); }
+
+		/* Diagram header for projects without screenshots */
+		.proj-diagram {
+			aspect-ratio: 16 / 9;
+			background: #0c1220;
+			border-bottom: 1px solid var(--border);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 14px;
+			padding: 28px 30px;
+			font-family: var(--mono);
+			font-size: 0.78rem;
+			color: var(--text-dim);
+		}
+		.flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+		.flow .node {
+			border: 1px solid var(--border-bright);
+			background: var(--surface-2);
+			padding: 5px 12px;
+			border-radius: 8px;
+			color: var(--text);
+			white-space: nowrap;
+		}
+		.flow .arr { color: var(--accent); }
+		.proj-diagram .cap { color: var(--text-faint); font-size: 0.72rem; }
+
 		/* ---------- Certifications ---------- */
-		.certs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+		.certs { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
 		.cert {
 			background: var(--surface);
 			border: 1px solid var(--border);
@@ -419,6 +485,51 @@
 			font-weight: 600;
 		}
 		.cert a:hover { color: var(--accent-2); }
+		.cert .badge-icon {
+			width: 84px; height: 84px;
+			border-radius: 10px;
+			background: rgba(56, 189, 248, 0.1);
+			color: var(--accent);
+			display: flex; align-items: center; justify-content: center;
+			font-size: 1.9rem;
+			margin-bottom: 20px;
+		}
+
+		/* Education */
+		.sub-head {
+			margin: 56px 0 22px;
+		}
+		.sub-head .index {
+			font-family: var(--mono);
+			color: var(--accent);
+			font-size: 0.85rem;
+			display: block;
+			margin-bottom: 6px;
+		}
+		.sub-head h3 { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.01em; }
+		.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+		.edu {
+			display: flex;
+			gap: 18px;
+			align-items: flex-start;
+			background: var(--surface);
+			border: 1px solid var(--border);
+			border-radius: var(--radius);
+			padding: 24px;
+			transition: border-color .2s, transform .2s;
+		}
+		.edu:hover { border-color: var(--border-bright); transform: translateY(-3px); }
+		.edu .icon {
+			flex-shrink: 0;
+			width: 42px; height: 42px;
+			display: flex; align-items: center; justify-content: center;
+			border-radius: 10px;
+			background: rgba(45, 212, 191, 0.1);
+			color: var(--accent-2);
+			font-size: 1.05rem;
+		}
+		.edu h4 { font-size: 1rem; font-weight: 700; }
+		.edu .meta { font-family: var(--mono); font-size: 0.76rem; color: var(--text-dim); margin-top: 4px; }
 
 		/* ---------- Contact ---------- */
 		.contact-wrap {
@@ -491,6 +602,7 @@
 			.stat:nth-child(2) { border-right: 0; }
 			.stat:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
 			.featured { grid-template-columns: 1fr; }
+			.edu-grid { grid-template-columns: 1fr; }
 			.proj.wide { flex-direction: column; }
 			.proj.wide .proj-img, .proj.wide .proj-body { width: 100%; }
 			.proj.wide .proj-img { aspect-ratio: 16/9; min-height: 0; }
@@ -513,8 +625,9 @@
 			<a class="logo" href="#top"><span class="prompt">riyad@data</span>:~$ <span class="cursor"></span></a>
 			<ul class="nav-links">
 				<li><a href="#stack">Stack</a></li>
+				<li><a href="#experience">Experience</a></li>
 				<li><a href="#projects">Projects</a></li>
-				<li><a href="#certs">Certifications</a></li>
+				<li><a href="#certs">Credentials</a></li>
 				<li><a class="cta" href="#contact">Get in touch</a></li>
 			</ul>
 		</div>
@@ -525,19 +638,20 @@
 		<div class="container">
 			<div class="hero-grid">
 				<div>
-					<p class="kicker">// senior data engineer · azure · fabric</p>
+					<p class="kicker">// senior data engineer · bi developer · kraków, poland</p>
 					<h1>Riyad <span class="grad">Bakhshiyev</span></h1>
-					<p class="role">Senior Data Engineer</p>
+					<p class="role">Senior Data Engineer &amp; BI Developer</p>
 					<p class="lede">
-						I design and build <strong>cloud data platforms</strong> on
-						<strong>Azure</strong> and <strong>Microsoft Fabric</strong> — from ingestion
-						and ETL/ELT pipelines to dimensional models and the BI layer on top.
-						Fluent in <strong>SQL</strong>, <strong>Python</strong> and <strong>DAX</strong>,
-						with a track record of turning raw, messy data into reliable,
-						production-grade analytics.
+						<strong>8+ years</strong> designing cloud-native data platforms and analytics
+						solutions. Currently a <strong>Senior Azure Developer at Luxoft</strong>,
+						building event-driven data integration with <strong>Azure Functions</strong>,
+						<strong>Service Bus</strong> and <strong>Databricks</strong>. Previously at
+						<strong>Heineken</strong>, where my pipelines and Power BI work cut reporting
+						time by 40% and sped up data retrieval by 50%.
 					</p>
 					<div class="btn-row">
 						<a class="btn btn-primary" href="#projects"><i class="fas fa-diagram-project fa-code-branch"></i> View my work</a>
+						<a class="btn btn-ghost" href="resume/RIYAD_BAKHSHIYEV_RESUME.pdf" download><i class="fas fa-file-arrow-down fa-download"></i> Resume</a>
 						<a class="btn btn-ghost" href="https://www.linkedin.com/in/riyadbkh/"><i class="fab fa-linkedin"></i> LinkedIn</a>
 					</div>
 				</div>
@@ -563,10 +677,10 @@
 			</div>
 
 			<div class="stats reveal">
-				<div class="stat"><div class="num">5+</div><div class="lbl">Years working with data</div></div>
-				<div class="stat"><div class="num">3</div><div class="lbl">Professional certifications</div></div>
-				<div class="stat"><div class="num">12+</div><div class="lbl">End-to-end projects shipped</div></div>
-				<div class="stat"><div class="num">4</div><div class="lbl">BI platforms mastered</div></div>
+				<div class="stat"><div class="num">8+</div><div class="lbl">Years in data engineering</div></div>
+				<div class="stat"><div class="num">4</div><div class="lbl">Microsoft &amp; IBM certifications</div></div>
+				<div class="stat"><div class="num">50%</div><div class="lbl">Faster data retrieval delivered</div></div>
+				<div class="stat"><div class="num">40%</div><div class="lbl">Reporting time cut for users</div></div>
 			</div>
 		</div>
 	</section>
@@ -582,47 +696,138 @@
 			<div class="stack-grid">
 				<div class="stack-card reveal">
 					<div class="icon"><i class="fas fa-cloud"></i></div>
-					<h3>Cloud &amp; Platforms</h3>
+					<h3>Azure &amp; Cloud</h3>
 					<div class="tags">
-						<span class="tag">Azure Data Factory</span>
-						<span class="tag">Azure Databricks</span>
-						<span class="tag">Azure Synapse</span>
+						<span class="tag">Data Factory</span>
+						<span class="tag">Databricks + DABs</span>
+						<span class="tag">Synapse</span>
 						<span class="tag">Microsoft Fabric</span>
+						<span class="tag">Azure Functions</span>
+						<span class="tag">Service Bus</span>
+						<span class="tag">Event Hub</span>
 						<span class="tag">ADLS Gen2</span>
-					</div>
-				</div>
-				<div class="stack-card reveal">
-					<div class="icon"><i class="fas fa-code"></i></div>
-					<h3>Languages</h3>
-					<div class="tags">
-						<span class="tag">SQL</span>
-						<span class="tag">Python</span>
-						<span class="tag">PySpark</span>
-						<span class="tag">DAX</span>
-						<span class="tag">Power Query / M</span>
 					</div>
 				</div>
 				<div class="stack-card reveal">
 					<div class="icon"><i class="fas fa-database"></i></div>
 					<h3>Data Engineering</h3>
 					<div class="tags">
-						<span class="tag">ETL / ELT</span>
+						<span class="tag">PySpark</span>
 						<span class="tag">Delta Lake</span>
+						<span class="tag">dbt</span>
+						<span class="tag">Apache Kafka</span>
+						<span class="tag">Apache Airflow</span>
+						<span class="tag">Snowflake</span>
+						<span class="tag">RabbitMQ</span>
 						<span class="tag">Medallion architecture</span>
-						<span class="tag">Star schema modeling</span>
-						<span class="tag">SQL Server</span>
-						<span class="tag">Web scraping</span>
+					</div>
+				</div>
+				<div class="stack-card reveal">
+					<div class="icon"><i class="fas fa-code"></i></div>
+					<h3>Languages &amp; DevOps</h3>
+					<div class="tags">
+						<span class="tag">SQL</span>
+						<span class="tag">Python</span>
+						<span class="tag">DAX</span>
+						<span class="tag">PowerShell</span>
+						<span class="tag">Docker</span>
+						<span class="tag">Azure DevOps</span>
+						<span class="tag">GitHub Actions</span>
+						<span class="tag">CI/CD</span>
 					</div>
 				</div>
 				<div class="stack-card reveal">
 					<div class="icon"><i class="fas fa-chart-line"></i></div>
 					<h3>Analytics &amp; BI</h3>
 					<div class="tags">
-						<span class="tag">Power BI</span>
+						<span class="tag">Power BI + RLS</span>
+						<span class="tag">Power Apps</span>
+						<span class="tag">Power Automate</span>
+						<span class="tag">Deneb</span>
 						<span class="tag">Tableau</span>
-						<span class="tag">IBM Cognos</span>
 						<span class="tag">Semantic models</span>
+						<span class="tag">Data storytelling</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============ EXPERIENCE ============ -->
+	<section id="experience">
+		<div class="container">
+			<div class="sec-head reveal">
+				<span class="index">02 // experience</span>
+				<h2>Where I've worked</h2>
+			</div>
+			<div class="timeline">
+				<div class="job reveal">
+					<div class="period">Jan 2026 — Present</div>
+					<h3>Senior Azure Developer</h3>
+					<div class="company">Luxoft <span>· Kraków, Poland</span></div>
+					<ul>
+						<li>Design event-driven data integration moving trading data from Orchestrade into the Azure data layer using Azure Service Bus, RabbitMQ, Azure Functions and Databricks.</li>
+						<li>Build Python-based Azure Functions that ingest from source systems, publish to Service Bus and feed operational status back upstream.</li>
+						<li>Ship Databricks pipelines and Asset Bundles (DABs) to transform, validate and load data into the platform.</li>
+					</ul>
+					<div class="tags">
+						<span class="tag">Azure Functions</span>
+						<span class="tag">Service Bus</span>
+						<span class="tag">RabbitMQ</span>
+						<span class="tag">Databricks</span>
+						<span class="tag">Python</span>
+					</div>
+				</div>
+
+				<div class="job reveal">
+					<div class="period">Jun 2023 — Dec 2025</div>
+					<h3>Power BI Developer</h3>
+					<div class="company">Heineken Global Shared Services <span>· Kraków, Poland</span></div>
+					<ul>
+						<li>Built and optimized Power BI dashboards in an Agile cross-functional team, cutting data inspection time by 40% and improving usability by 30%.</li>
+						<li>Boosted data retrieval efficiency by 50% with optimized SQL on Azure Synapse and Redshift, plus ETL pipelines in Data Factory and PySpark notebooks in Databricks.</li>
+						<li>Implemented Row-Level Security, gateway configuration and advanced Power Query transformations; extended visuals with Python and Deneb.</li>
+						<li>Led knowledge-sharing on ETL design and Spark performance tuning, mentoring junior engineers.</li>
+					</ul>
+					<div class="tags">
+						<span class="tag">Power BI</span>
+						<span class="tag">DAX</span>
+						<span class="tag">Synapse</span>
+						<span class="tag">Data Factory</span>
+						<span class="tag">PySpark</span>
+						<span class="tag">RLS</span>
+					</div>
+				</div>
+
+				<div class="job reveal">
+					<div class="period">Apr 2022 — Mar 2023</div>
+					<h3>Data Analyst</h3>
+					<div class="company">International Committee of the Red Cross <span>· Baku, Azerbaijan</span></div>
+					<ul>
+						<li>Analyzed 10,000+ beneficiary records, building Power BI dashboards that improved stakeholder productivity by 30%.</li>
+						<li>Built SQL- and pandas/NumPy-based ETL and statistical analysis workflows for beneficiary data.</li>
+					</ul>
+					<div class="tags">
+						<span class="tag">Power BI</span>
+						<span class="tag">SQL</span>
+						<span class="tag">pandas</span>
 						<span class="tag">Excel</span>
+					</div>
+				</div>
+
+				<div class="job reveal">
+					<div class="period">Aug 2017 — Apr 2022</div>
+					<h3>Data Engineer <span style="color:var(--text-faint); font-weight:500;">(prev. Handover Engineer)</span></h3>
+					<div class="company">Maire Tecnimont <span>· Baku &amp; Sumqayit, Azerbaijan</span></div>
+					<ul>
+						<li>Designed a new database schema that reduced query time by 40% and built Power BI reporting that cut reporting effort by 20%.</li>
+						<li>Owned daily ETL and data quality monitoring; led a team of 5, presenting insights to stakeholders and management.</li>
+					</ul>
+					<div class="tags">
+						<span class="tag">ETL</span>
+						<span class="tag">Database design</span>
+						<span class="tag">Power BI</span>
+						<span class="tag">Team leadership</span>
 					</div>
 				</div>
 			</div>
@@ -630,10 +835,10 @@
 	</section>
 
 	<!-- ============ PROJECTS ============ -->
-	<section id="projects">
+	<section class="alt" id="projects">
 		<div class="container">
 			<div class="sec-head reveal">
-				<span class="index">02 // featured work</span>
+				<span class="index">03 // featured work</span>
 				<h2>Data engineering projects</h2>
 				<p>End-to-end builds — ingestion, transformation, modeling and serving — plus the analytics layers that sit on top.</p>
 			</div>
@@ -642,13 +847,13 @@
 				<article class="proj wide reveal">
 					<div class="proj-img"><img src="images/gallery/fulls/azure2.png" alt="Azure data engineering architecture" /></div>
 					<div class="proj-body">
-						<h3>End-to-End Azure Data Engineering Platform</h3>
+						<h3>End-to-End Azure Data Engineering Platform <span style="font-family:var(--mono); font-size:0.7rem; color:var(--accent-2); vertical-align:middle;">// master's thesis</span></h3>
 						<p>
-							A complete medallion-architecture pipeline on Azure: ingestion from an on-prem
-							SQL Server with Data Factory, bronze/silver/gold transformations in Databricks
-							with Delta Lake, warehousing in Synapse, and a Power BI semantic model on top —
-							with Azure Key Vault and AAD handling security end to end. Documented as a full
-							project guide on Medium.
+							A complete medallion-architecture pipeline on Azure, built as my MSc Data
+							Science thesis: ingestion from an on-prem SQL Server with Data Factory,
+							bronze/silver/gold transformations in Databricks with Delta Lake and optimized
+							Spark batch + streaming jobs, warehousing in Synapse, and a Power BI semantic
+							model on top. Documented as a full project guide on Medium.
 						</p>
 						<div class="tags">
 							<span class="tag">Data Factory</span>
@@ -660,6 +865,77 @@
 						</div>
 						<div class="proj-links">
 							<a href="https://medium.com/@riyad.bv50/an-end-to-end-azure-data-engineering-a-complete-project-guide-c8a2c9789754"><i class="fas fa-arrow-up-right-from-square fa-external-link-alt"></i> Read the project guide</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="proj reveal">
+					<div class="proj-diagram">
+						<div class="cap"># CDC streaming architecture</div>
+						<div class="flow">
+							<span class="node">PostgreSQL</span><span class="arr">→</span>
+							<span class="node">Debezium</span><span class="arr">→</span>
+							<span class="node">Kafka</span>
+						</div>
+						<div class="flow">
+							<span class="arr">→</span><span class="node">Airflow</span><span class="arr">→</span>
+							<span class="node">Snowflake</span><span class="arr">→</span>
+							<span class="node">dbt</span>
+						</div>
+					</div>
+					<div class="proj-body">
+						<h3>Real-Time Banking Data Pipeline</h3>
+						<p>
+							End-to-end streaming pipeline simulating a banking ecosystem: change data
+							capture from PostgreSQL with Debezium and Kafka, orchestration with Airflow,
+							bronze/silver/gold layers in Snowflake, dbt models with SCD Type-2 snapshots,
+							CI/CD via GitHub Actions, and the whole stack containerized with Docker Compose.
+						</p>
+						<div class="tags">
+							<span class="tag">Kafka</span>
+							<span class="tag">Debezium</span>
+							<span class="tag">Airflow</span>
+							<span class="tag">Snowflake</span>
+							<span class="tag">dbt</span>
+							<span class="tag">Docker</span>
+						</div>
+						<div class="proj-links">
+							<a href="https://github.com/RiyadBkhsh"><i class="fab fa-github"></i> GitHub</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="proj reveal">
+					<div class="proj-diagram">
+						<div class="cap"># dbt on databricks · dev → prod</div>
+						<div class="flow">
+							<span class="node">sources</span><span class="arr">→</span>
+							<span class="node">staging</span><span class="arr">→</span>
+							<span class="node">marts</span>
+						</div>
+						<div class="flow">
+							<span class="node">dbt test ✓</span><span class="arr">→</span>
+							<span class="node">CI/CD</span><span class="arr">→</span>
+							<span class="node">production</span>
+						</div>
+					</div>
+					<div class="proj-body">
+						<h3>Databricks &amp; dbt Platform with CI/CD</h3>
+						<p>
+							Modular dbt pipelines on Databricks — staging, marts, seeds and SCD snapshots —
+							with data-quality tests (unique, not_null, relationships, custom), documented
+							lineage and macros, and automated dev-to-prod promotion via PowerShell and
+							CI/CD pipelines under Git version control.
+						</p>
+						<div class="tags">
+							<span class="tag">dbt</span>
+							<span class="tag">Databricks</span>
+							<span class="tag">YAML</span>
+							<span class="tag">PowerShell</span>
+							<span class="tag">CI/CD</span>
+						</div>
+						<div class="proj-links">
+							<a href="https://github.com/RiyadBkhsh"><i class="fab fa-github"></i> GitHub</a>
 						</div>
 					</div>
 				</article>
@@ -751,10 +1027,10 @@
 	</section>
 
 	<!-- ============ DASHBOARD GALLERY ============ -->
-	<section class="alt" id="dashboards">
+	<section id="dashboards">
 		<div class="container">
 			<div class="sec-head reveal">
-				<span class="index">03 // analytics gallery</span>
+				<span class="index">04 // analytics gallery</span>
 				<h2>Dashboards &amp; visualizations</h2>
 				<p>Selected BI work — click any tile to open the live report.</p>
 			</div>
@@ -796,18 +1072,18 @@
 	</section>
 
 	<!-- ============ CERTIFICATIONS ============ -->
-	<section id="certs">
+	<section class="alt" id="certs">
 		<div class="container">
 			<div class="sec-head reveal">
-				<span class="index">04 // credentials</span>
-				<h2>Certifications</h2>
+				<span class="index">05 // credentials</span>
+				<h2>Certifications &amp; education</h2>
 			</div>
 			<div class="certs">
 				<div class="cert reveal">
-					<img src="images/Fabric.png" alt="Microsoft Fabric Analytics Engineer badge" />
-					<h3>Fabric Analytics Engineer Associate</h3>
-					<div class="issuer">Microsoft Certified · DP-600</div>
-					<p>Planning and implementing data analytics solutions in Microsoft Fabric — preparing and serving data, building semantic models, and managing the analytics lifecycle.</p>
+					<img src="images/Fabric.png" alt="Microsoft Fabric Data Engineer badge" />
+					<h3>Fabric Data Engineer Associate</h3>
+					<div class="issuer">Microsoft Certified · DP-700</div>
+					<p>Implementing data engineering solutions in Microsoft Fabric — ingesting, transforming, securing and monitoring data across lakehouse workloads.</p>
 					<a href="https://learn.microsoft.com/en-us/users/riyadbakhshiyev-8945/credentials/45cb4df9bcc905e6?ref=https%3A%2F%2Fwww.linkedin.com%2F">Verify credential →</a>
 				</div>
 				<div class="cert reveal">
@@ -818,6 +1094,13 @@
 					<a href="https://learn.microsoft.com/en-us/users/riyadbakhshiyev-8945/credentials/3c5662b78998735d?ref=https%3A%2F%2Fwww.linkedin.com%2F">Verify credential →</a>
 				</div>
 				<div class="cert reveal">
+					<div class="badge-icon"><i class="fas fa-cloud"></i></div>
+					<h3>Azure Data Fundamentals</h3>
+					<div class="issuer">Microsoft Certified · AZ-900</div>
+					<p>Core Azure and cloud data concepts — the foundation under the platform work above.</p>
+					<a href="https://learn.microsoft.com/en-us/users/riyadbakhshiyev-8945/">View profile →</a>
+				</div>
+				<div class="cert reveal">
 					<img src="images/Professional_Certificate_-_Data_Analyst.png" alt="IBM Data Analyst certificate badge" />
 					<h3>IBM Data Analyst Professional Certificate</h3>
 					<div class="issuer">IBM · Coursera · 9-course program</div>
@@ -825,18 +1108,40 @@
 					<a href="https://www.coursera.org/account/accomplishments/specialization/certificate/44GDM5F4J3QL">Verify credential →</a>
 				</div>
 			</div>
+
+			<div class="sub-head reveal">
+				<span class="index">// education</span>
+				<h3>Education</h3>
+			</div>
+			<div class="edu-grid">
+				<div class="edu reveal">
+					<div class="icon"><i class="fas fa-graduation-cap"></i></div>
+					<div>
+						<h4>MSc in Data Science</h4>
+						<div class="meta">WSB University · Dąbrowa Górnicza, Poland</div>
+					</div>
+				</div>
+				<div class="edu reveal">
+					<div class="icon"><i class="fas fa-flask"></i></div>
+					<div>
+						<h4>B.Eng. in Chemical Engineering</h4>
+						<div class="meta">Baku Higher Oil School · Baku, Azerbaijan</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
 	<!-- ============ CONTACT ============ -->
-	<section class="alt" id="contact">
+	<section id="contact">
 		<div class="container">
 			<div class="contact-wrap reveal">
 				<h2>Let's build your <span class="grad">data platform</span></h2>
-				<p>Open to senior data engineering roles and consulting engagements. The fastest way to reach me:</p>
+				<p>Based in Kraków, Poland · working in English, Azerbaijani and Russian.<br>Open to senior data engineering roles and consulting engagements.</p>
 				<div class="contact-info">
 					<a href="mailto:riyad.bv50@gmail.com"><i class="fas fa-envelope"></i>riyad.bv50@gmail.com</a>
-					<span><i class="fas fa-phone"></i>+48 789 645 535</span>
+					<span><i class="fas fa-phone"></i>+48 789 643 535</span>
+					<a href="resume/RIYAD_BAKHSHIYEV_RESUME.pdf" download><i class="fas fa-file-arrow-down fa-download"></i>Resume (PDF)</a>
 				</div>
 				<div class="socials">
 					<a href="https://www.linkedin.com/in/riyadbkh/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
